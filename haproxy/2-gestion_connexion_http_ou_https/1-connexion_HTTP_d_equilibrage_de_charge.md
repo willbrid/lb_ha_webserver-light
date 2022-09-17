@@ -20,7 +20,7 @@ sudo setsebool -P haproxy_connect_any 1
 
 - Créeons une configuration HAProxy
 
-Nous allons modifier le fichier de configuration "stock" HAProxy à **/etc/haproxy/haproxy.cfg** pour servir nos sites. Nous allons supprimer les configurations d'interface et de back-end d'origine et créer les nôtres.<br>
+Nous allons modifier le fichier de configuration "stock" HAProxy à **/etc/haproxy/haproxy.cfg** pour servir nos sites. Nous allons supprimer les configurations de **frontend** et de **backend** d'origine et créer les nôtres.<br>
 Sur notre système, nous avons 2 sites configurés, avec 3 conteneurs de serveur Web dans chacun. Ils ont été préremplis avec un fichier texte de test sur **/test.txt** qui identifie le site et le serveur auxquels nous accédons.<br>
 De plus, nous allons ajouter un bloc de configuration pour activer le portail Web sur notre socket UNIX de statistiques.
 
