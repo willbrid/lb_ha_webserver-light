@@ -113,6 +113,7 @@ site1_server2.txt  site2_server1.txt  site2_server3.txt
 ```
 
 - Démarrons nos conteneurs de serveur Web
+
 Nous allons démarrer un total de 6 conteneurs nginx en utilisant Podman, en simulant 2 sites, avec 3 serveurs web par site. Nos serveurs Web seront disponibles sur les ports 8081 à 8086 .
 
 ```
