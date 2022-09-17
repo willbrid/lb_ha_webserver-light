@@ -130,3 +130,5 @@ Voici un schéma d'une configuration haute disponibilité :
 ![ha-diagram-animated.gif](../images/ha-diagram-animated.gif)
 
 Dans cet exemple, nous avons plusieurs équilibreurs de charge (un actif et un ou plusieurs passifs) derrière une adresse IP statique qui peut être remappée d'un serveur à un autre. Lorsqu'un utilisateur accède à notre site Web, la demande passe par l'adresse IP externe vers l'équilibreur de charge actif. Si cet équilibreur de charge échoue, notre mécanisme de basculement le détectera et réattribuera automatiquement l'adresse IP à l'un des serveurs passifs. Il existe plusieurs façons d'implémenter une configuration HA active/passive.
+
+Source: [Introduction-to-haproxy-and-load-balancing-concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
