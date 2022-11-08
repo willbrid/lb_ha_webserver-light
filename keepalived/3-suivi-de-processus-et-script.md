@@ -142,6 +142,10 @@ sudo vi /usr/local/bin/keepalived_check.sh
 /usr/bin/ping -c 1 -W 1 8.8.8.8 > /dev/null 2>&1
 ```
 
+```
+sudo chmod +x /usr/local/bin/keepalived_check.sh
+```
+
 Un timeout de 1 seconde pour le ping (-W 1) a été précisé car lors de l'écriture de scripts de vérification Keepalived, c'est une bonne idée de les garder légers et rapides. Nous ne souhaiterons pas qu'un serveur cassé reste le maître pendant longtemps parce que notre script est lent.
 
 - Configuration du serveur principal srv1 -> 192.168.56.4
@@ -267,7 +271,11 @@ sudo vi /usr/local/bin/keepalived_notify.sh
 ```
 #!/bin/bash
 
-echo "$1 $2 has transitioned to the $3 state with a priority of $4" > ~/keepalived_status
+echo "$1 $2 has transitioned to the $3 state with a priority of $4" > /var/run/keepalived_status
+```
+
+```
+sudo chmod +x /usr/local/bin/keepalived_notify.sh
 ```
 
 - Configuration du serveur principal srv1 -> 192.168.56.4
